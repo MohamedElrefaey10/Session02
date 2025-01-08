@@ -12,7 +12,7 @@ namespace Session02.Encapsulation
         public int Id;
         private string? Name;
         private decimal salary;
-        
+
         #endregion
 
         #region Constructors
@@ -20,7 +20,7 @@ namespace Session02.Encapsulation
         {
             Id = id;
             Name = name;
-            Salary = _salary;
+            gSalary = _salary;
         }
         #endregion
 
@@ -45,10 +45,10 @@ namespace Session02.Encapsulation
 
         #region Propirty
 
-        public decimal Salary
+        public decimal gSalary
         {
-            get 
-        {
+            get
+            {
                 return salary;
             }
             set
@@ -73,7 +73,7 @@ namespace Session02.Encapsulation
 
         public decimal Deduction
         {
-            get { return Salary * 0.2m; }
+            get { return gSalary * 0.2m; }
         }
 
         #endregion
