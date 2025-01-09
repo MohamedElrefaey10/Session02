@@ -36,28 +36,38 @@ namespace Session02
             //Console.WriteLine(employee.Deduction);
             #endregion
 
-            #region MyRegion
+            #region PhoneBook
 
-            PhoneBook Note = new PhoneBook(3);
+            //PhoneBook Note = new PhoneBook(3);
 
-            Note.AddPerson(0, "Ahmed", 123);
-            Note.AddPerson(1, "Mona", 456);
-            Note.AddPerson(2, "Ramiz", 789);
+            //Note.AddPerson(0, "Ahmed", 123);
+            //Note.AddPerson(1, "Mona", 456);
+            //Note.AddPerson(2, "Ramiz", 789);
 
-            ////int numberr = Note.GetNumber("Monam");
+            //////int numberr = Note.GetNumber("Monam");
 
-            ////Console.WriteLine(numberr == -1 ? "Not found": numberr); 
+            //////Console.WriteLine(numberr == -1 ? "Not found": numberr); 
 
-            //Note.SetNumber("Ramiz", 555);
-            //Console.WriteLine(Note.GetNumber("Ramiz"));
+            ////Note.SetNumber("Ramiz", 555);
+            ////Console.WriteLine(Note.GetNumber("Ramiz"));
 
-            //Note["Ahmed"] = 525;
-            //Console.WriteLine(Note["Ahmed"]);
+            ////Note["Ahmed"] = 525;
+            ////Console.WriteLine(Note["Ahmed"]);
 
-            for (int i = 0; i < Note.Size; i++)
-            {
-                Console.WriteLine(Note[i]);
-            }
+            //for (int i = 0; i < Note.Size; i++)
+            //{
+            //    Console.WriteLine(Note[i]);
+            //}
+            #endregion
+
+            #region Class
+
+            Car C01 = new Car(10);
+
+            Console.WriteLine(C01);
+
+
+
             #endregion
         }
     }
