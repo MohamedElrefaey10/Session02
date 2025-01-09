@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,8 +12,9 @@ namespace Session02.Encapsulation
         #region Attributes
         string[] Names;
         int[] Numbers;
-        int Size;
+        public int Size { get; set; }
         #endregion
+
         #region Constructors
         public PhoneBook(int size)
         {
@@ -34,7 +36,7 @@ namespace Session02.Encapsulation
             }
         }
         #region EX01 => Getter - Setter 
-        public int GetMumber(string Name)
+        public int GetNumber(string Name)
         {
             for (int i = 0; i < Names.Length; i++)
             {
@@ -56,7 +58,39 @@ namespace Session02.Encapsulation
                 }
             }
         }
-
         #endregion
+        public int this[string Name]
+        {
+            get
+            {
+                for (int i = 0; i < Names.Length; i++)
+                {
+                    if (Names[i] == Name)
+                    {
+                        return Numbers[i];
+                    }
+                }
+                return -1;
+            }
+            set
+            {
+                for (int i = 0; i < Names.Length; i++)
+                {
+                    if (Names[i] == Name)
+                    {
+                        Numbers[i] = value;
+                        break;
+                    }
+                }
+            }
+        }
+        public string this[int index]
+        {
+            get
+            {
+                return $"{index} :: {Names[index]} :: {Numbers[index]}";
+            }
+        }
+
     }
 }

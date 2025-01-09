@@ -38,18 +38,26 @@ namespace Session02
 
             #region MyRegion
 
-            PhoneBook Note = new PhoneBook(4);
+            PhoneBook Note = new PhoneBook(3);
 
-            Note.AddPerson(1, "Ahmed", 123);
-            Note.AddPerson(2, "Mona", 456);
-            Note.AddPerson(3, "Ramiz", 789);
+            Note.AddPerson(0, "Ahmed", 123);
+            Note.AddPerson(1, "Mona", 456);
+            Note.AddPerson(2, "Ramiz", 789);
 
-            //int numberr = Note.GetMumber("Monam");
+            ////int numberr = Note.GetNumber("Monam");
 
-            //Console.WriteLine(numberr == -1 ? "Not found": numberr); 
+            ////Console.WriteLine(numberr == -1 ? "Not found": numberr); 
 
-            Note.SetNumber("Ramiz", 555);
-            Console.WriteLine(Note.GetMumber("Ramiz"));
+            //Note.SetNumber("Ramiz", 555);
+            //Console.WriteLine(Note.GetNumber("Ramiz"));
+
+            //Note["Ahmed"] = 525;
+            //Console.WriteLine(Note["Ahmed"]);
+
+            for (int i = 0; i < Note.Size; i++)
+            {
+                Console.WriteLine(Note[i]);
+            }
             #endregion
         }
     }
