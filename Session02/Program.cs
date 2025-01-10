@@ -47,20 +47,40 @@
             Person p2 = new Person(name2, age2);
             Person p3 = new Person(name3, age3);
 
-            if (p1.Age > p2.Age & p1.Age > p3.Age)
+
+            Person[] pX = { p1, p2, p3 };
+
+            
+            Person oldestPerson = pX[0];
+
+            for (int i = 1; i < pX.Length; i++)
             {
-                Console.WriteLine(p1);
-            }
-            else if(p2.Age > p1.Age & p2.Age > p3.Age)
-            {
-                Console.WriteLine(p2);
-            }
-            else if (p3.Age > p1.Age & p3.Age > p3.Age)
-            {
-                Console.WriteLine(p3);
+                if (pX[i].Age > oldestPerson.Age)
+                {
+                    oldestPerson = pX[i];
+                }
             }
 
+            Console.WriteLine($"The oldest person is: {oldestPerson}");
+
+            //if (p1.Age > p2.Age & p1.Age > p3.Age)
+            //{
+            //    Console.WriteLine(p1);
+            //}
+            //else if (p2.Age > p1.Age & p2.Age > p3.Age)
+            //{
+            //    Console.WriteLine(p2);
+            //}
+            //else if (p3.Age > p1.Age & p3.Age > p3.Age)
+            //{
+            //    Console.WriteLine(p3);
+            //}
+
+            
             #endregion
+
+
+
         }
     }
 }
