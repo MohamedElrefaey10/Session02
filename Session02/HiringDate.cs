@@ -8,7 +8,12 @@ namespace Session02
 {
     internal class HiringDate
     {
-
+        public enum SecurityLevel
+        {
+            Guest,
+            DBA,
+            SecurityOfficer
+        }
         public int Day { get; set; }
         public int Month { get; set; }
         public int Years { get; set; }
