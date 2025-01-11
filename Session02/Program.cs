@@ -1,4 +1,10 @@
-﻿namespace Session02
+﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Reflection.Emit;
+using System.Security.Claims;
+using System.Security.Cryptography;
+
+namespace Session02
 {
     internal class Program
     {
@@ -24,44 +30,44 @@
             #endregion
             #region 2.Create a struct called "Person" with properties "Name" and "Age". Write a C# program that takes details of 3 persons as input from the user and displays the name and age of the oldest person.
 
-            Console.WriteLine("Enter the details of person 1:");
-            Console.Write("Name: ");
-            string name1 = Console.ReadLine();
-            Console.Write("Age: ");
-            int age1 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the details of person 1:");
+            //Console.Write("Name: ");
+            //string name1 = Console.ReadLine();
+            //Console.Write("Age: ");
+            //int age1 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the details of person 2:");
-            Console.Write("Name: ");
-            string name2 = Console.ReadLine();
-            Console.Write("Age: ");
-            int age2 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter the details of person 2:");
+            //Console.Write("Name: ");
+            //string name2 = Console.ReadLine();
+            //Console.Write("Age: ");
+            //int age2 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the details of person 3:");
-            Console.Write("Name: ");
-            string name3 = Console.ReadLine();
-            Console.Write("Age: ");
-            int age3 = int.Parse(Console.ReadLine());
-
-
-            Person p1 = new Person(name1, age1);
-            Person p2 = new Person(name2, age2);
-            Person p3 = new Person(name3, age3);
+            //Console.WriteLine("Enter the details of person 3:");
+            //Console.Write("Name: ");
+            //string name3 = Console.ReadLine();
+            //Console.Write("Age: ");
+            //int age3 = int.Parse(Console.ReadLine());
 
 
-            Person[] pX = { p1, p2, p3 };
+            //Person p1 = new Person(name1, age1);
+            //Person p2 = new Person(name2, age2);
+            //Person p3 = new Person(name3, age3);
 
-            
-            Person oldestPerson = pX[0];
 
-            for (int i = 1; i < pX.Length; i++)
-            {
-                if (pX[i].Age > oldestPerson.Age)
-                {
-                    oldestPerson = pX[i];
-                }
-            }
+            //Person[] pX = { p1, p2, p3 };
 
-            Console.WriteLine($"The oldest person is: {oldestPerson}");
+
+            //Person oldestPerson = pX[0];
+
+            //for (int i = 1; i < pX.Length; i++)
+            //{
+            //    if (pX[i].Age > oldestPerson.Age)
+            //    {
+            //        oldestPerson = pX[i];
+            //    }
+            //}
+
+            //Console.WriteLine($"The oldest person is: {oldestPerson}");
 
             //if (p1.Age > p2.Age & p1.Age > p3.Age)
             //{
@@ -76,9 +82,19 @@
             //    Console.WriteLine(p3);
             //}
 
-            
-            #endregion
 
+            #endregion
+            #region Part 02 1.Design and implement a Class for the employees in a company: Notes: ●	Employee is identified by an ID, Name, security level, salary, hire date and Gender. ●	We need to restrict the Gender field to be only M or F[Male or Female] ●	Assign the following security privileges to the employee(guest, Developer, secretary and DBA) in a form of Enum. ●	We want to provide the Employee Class to represent Employee data in a string Form(override ToString()), display employee salary in a currency format. [Use String.Format() Function]. 0.	Develop a Class to represent the Hiring Date Data: ● Consisting of fields to hold the day, month and Years.
+
+
+            HiringDate hireDatex = new HiringDate(2, 2, 2022);
+
+            Employees emp = new Employees(name: "Mohamed", Gender.Male, 7000, Security_Level.Developer, hire_Date: hireDatex);
+            Console.WriteLine(emp);
+
+
+            #endregion
+            
 
 
         }

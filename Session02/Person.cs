@@ -12,40 +12,40 @@ namespace Session02
     internal struct Person
     {
 
-        private string name;
-        private int age;
-        public Person(string Name, int Age)
-        {
-            name = Name;
-            age = Age;
-        }
+        //private string name;
+        //private int age;
+        //public Person(string Name, int Age)
+        //{
+        //    name = Name;
+        //    age = Age;
+        //}
 
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = Name;
-            }
-        }
-        public int Age
-        {
-            get
-            {
-                return age;
-            }
-            set
-            {
-                age = value < 0 ? 20 : value;
-            }
+        //public string Name
+        //{
+        //    get
+        //    {
+        //        return name;
+        //    }
+        //    set
+        //    {
+        //        name = Name;
+        //    }
+        //}
+        //public int Age
+        //{
+        //    get
+        //    {
+        //        return age;
+        //    }
+        //    set
+        //    {
+        //        age = value < 0 ? 20 : value;
+        //    }
 
-        }
-        public override string ToString()
-        {
-            return $"Name : {Name}\nAge : {Age}";
-        }
+        //}
+        //public override string ToString()
+        //{
+        //    return $"Name : {Name}\nAge : {Age}";
+        //}
     }
 }
